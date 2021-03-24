@@ -188,7 +188,7 @@ Response
 **Query Params**
 - lat
 - long
-- radius (mil)
+- radius (KM)
 
 **Response body**
 - startPoint
@@ -205,7 +205,7 @@ Response
 Request URL
 
 ```
-http://localhost:3000/api/travel?lat=37.965972&long=34.673445&radius=5
+  http://localhost:3000/api/travel?lat=37.965972&long=34.673445&radius=5
 ```
 
 Response Body
@@ -276,4 +276,36 @@ Response Body
         "__v": 0
     }
 ]
+```
+
+#### Travel Distance
+
+[**GET**] _/api/travel/distance_
+
+**Query Params**
+- lat
+- long
+- radius (KM)
+
+**Response body**
+- maxDistance
+- minDistance
+
+> This body is list
+
+**Example**
+
+Request URL
+
+```
+  http://localhost:3000/api/travel/distance?lat=37.965972&long=34.673445&radius=5
+```
+
+Response Body
+
+```
+{
+  "maxDistance": 75.34118348732778,
+  "minDistance": 0.2056195240950808
+}
 ```

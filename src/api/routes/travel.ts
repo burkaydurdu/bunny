@@ -59,5 +59,26 @@ export default (app: Router) => {
 
       return res.status(200).json({});
     },
+  );
+  route.get(
+    "/distance",
+    middlewares.isAuth,
+    middlewares.attachCurrentUser,
+    async (req: Request, res: Response, next: NextFunction) => {
+      const logger:Logger = Container.get('logger');
+
+      const queryParams = req.query;
+
+      try {
+        const travelServiceInstance = Container.get(TravelService);
+        const travel = await travelServiceInstance.getDistanceTravel(queryParams);
+        return res.status(200).json(travel);
+      } catch (e) {
+        logger.error('🔥 error: %o', e);
+        return next(e);
+      }
+
+      return res.status(200).json({});
+    },
   )
 };
