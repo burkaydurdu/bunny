@@ -7,11 +7,15 @@
     "test": "jest",
     "start": "nodemon",
     "inspect": "nodemon --inspect src/app.ts",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "build": "tsc"
   },
   "keywords": [
     "node"
   ],
+  "engines": {
+    "node": "15.x"
+  },
   "author": "Burkay Durdu",
   "license": "ISC",
   "dependencies": {
@@ -32,6 +36,7 @@
   },
   "devDependencies": {
     "@types/agenda": "^2.0.9",
+    "@types/express": "^4.17.8",
     "jest": "^26.4.2",
     "nodemon": "^2.0.4",
     "prettier": "^2.1.2",
