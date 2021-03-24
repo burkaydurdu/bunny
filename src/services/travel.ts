@@ -119,10 +119,13 @@ export default class TravelService {
       var disArray = []
 
       travelRecords.forEach( doc => {
-        disArray.push(this.distance(doc.startPoint.coordinates[0],
-                                    doc.startPoint.coordinates[1],
-                                    doc.endPoint.coordinates[0],
-                                    doc.endPoint.coordinates[1]))
+        const start = doc.startPoint["coordinates"];
+        const end = doc.endPoint["coordinates"];
+
+        disArray.push(this.distance(start[0],
+                                    start[1],
+                                    end[0],
+                                    end[1]))
       });
 
 
