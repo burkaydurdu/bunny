@@ -1,0 +1,43 @@
+{
+  "name": "bunny",
+  "version": "1.0.0",
+  "description": "Bitaksi's bunny service",
+  "main": "src/app.ts",
+  "scripts": {
+    "test": "jest",
+    "start": "nodemon",
+    "inspect": "nodemon --inspect src/app.ts",
+    "heroku-postbuild": "npm run build"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Burkay Durdu",
+  "license": "ISC",
+  "dependencies": {
+    "agenda": "^3.1.0",
+    "argon2": "^0.27.1",
+    "body-parser": "^1.19.0",
+    "celebrate": "^14.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "event-dispatch": "^0.4.1",
+    "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.1",
+    "reflect-metadata": "^0.1.13",
+    "typedi": "^0.10.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/agenda": "^2.0.9",
+    "jest": "^26.4.2",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.1.2",
+    "ts-jest": "^26.4.0",
+    "ts-node": "^9.0.0",
+    "tslint": "^5.20.1",
+    "typescript": "^4.0.3"
+  }
+}
