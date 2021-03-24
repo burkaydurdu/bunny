@@ -1,6 +1,12 @@
 # Bunny
 
 ## Development
+
+I use node version 15.8.0
+```
+  n 15.8.0
+```
+
 Install node nodules:
 ```
   npm install
@@ -47,13 +53,13 @@ Response body
 **Example**
 
 Request
-```
+```json
 {"name"    : "Burkay",
  "email"   : "burkaydurdu@outlook.com",
  "password": "1B2b9s7SfR8c"}
 ```
 **Response**
-```
+```json
 {
   "user": {
     "_id": "6059fdf2f64185aa2271fc84",
@@ -87,12 +93,12 @@ Response body
 **Example**
 
 Request
-```
+```json
 {"email"   : "burkaydurdu@outlook.com",
  "password": "1B2b9s7SfR8c"}
 ```
 **Response**
-```
+```json
 {
   "user": {
     "_id": "6059fdf2f64185aa2271fc84",
@@ -138,13 +144,13 @@ Response body
 
 Headers
 
-```
+```json
 { 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDU5ZmRmMmY2NDE4NWFhMjI3MWZjODQiLCJuYW1lIjoiaGFsaW1lQG91dGxvb2suY29tIiwiZXhwIjoxNjIxNjk1MzY2LjE2OCwiaWF0IjoxNjE2NTExMzY2fQ.CQb7ugvDwj7N_93t1rN463SALAYNa3SVuqfd6MJDm1o' }
 ```
 
 Request
 
-```
+```json
 { 
     "startPoint": { "type": "Point", "coordinates": [38.395297, 34.009813]},
     "endPoint": { "type": "Point", "coordinates": [37.966454, 34.677219]},
@@ -155,7 +161,7 @@ Request
 
 Response
 
-```
+```json
 {
     "travel": {
         "startPoint": {
@@ -210,7 +216,7 @@ Request URL
 
 Response Body
 
-```
+```json
 [
     {
         "startPoint": {
@@ -303,7 +309,7 @@ Request URL
 
 Response Body
 
-```
+```json
 {
   "maxDistance": 75.34118348732778,
   "minDistance": 0.2056195240950808
